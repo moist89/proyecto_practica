@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{%block title%}
+		lista de productos
+ {%endblock%}
+	{%block content%}
+		<h1>Catalogo de Productos</h1>
+		{%if productos%}
+			{%for p in productos%}
+			<p>{{p.nombre}}</p>
+			{%endfor%}
+		{%else%}
+		<h2>No Existe productos</h2>
+		{% endif%}
+		<a href="{% url 'vista_addProducto'%}"> agregar productos</a>
+	{%endblock%}

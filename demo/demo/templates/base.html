@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<head>
+		<title>
+			{% block title%}
+				<h1>Titulo Base</h1>
+			{% endblock%}
+		</title>
+		{% block css%}<link rel="stylesheet" href="/media/css/myStyle.css">{%endblock%}
+	</head>
+	<body>
+
+		<img src="/media/images/foto.jpg"/>
+		
+		<HEADER>
+			<h1>Proyecto Demo (Ventas) productos
+			</h1>
+			<NAV>
+				<a href="{% url 'vista_principal'%}">Inicio</a>
+				<a href="{% url 'vista_producto'%}">Productos</a>
+				<a href="{% url 'vista_contacto' %}">Contacto</a>
+				<a href="{% url 'vista_about'%}">Acerca de..<a/>
+			</NAV>
+		</HEADER>
+		{% block content%}
+
+		{%endblock%}
+	
+</html>

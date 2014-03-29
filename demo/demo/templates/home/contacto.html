@@ -1,0 +1,24 @@
+
+{% extends 'base.html'%}
+
+{%block title%}
+
+		 Acerca de..
+ {%endblock%}
+	{%block content%}
+		{%if info_enviado%}
+			Gracias por enviar un comentario!!
+			<br>
+			<h1>Lo enviado fue:</h1>
+			<p>{{email}}</p>
+			<p>{{titulo}}</p>
+			<p>{{texto}}</p>
+		{%else%}
+				<form action="." method="POST" >
+					{%csrf_token%}
+					{{form.as_p}}
+					<input type="submit" value="submit">
+			</form>
+		{%endif%}
+	
+	{%endblock%}

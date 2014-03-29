@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>AgregandoProdcto</title>
+	</head>
+	<body>
+		<form action="." method="POST" accept-charset="utf-8">
+			{%csrf_token%}
+			{{form.as_p}}
+			<input type="submit"  value="Grabar">
+			<input type="reset"  value="Limpiar" >
+		</form>
+		{{info}}
+	<a href="{% url 'vista_producto'%}">volver</a>
+	</body>
+</html>
